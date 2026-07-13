@@ -978,7 +978,7 @@ const NavBar = ({ onLogin, onLoginClick, font }) => {
   return (
     <nav style={{
       position:"fixed", top:0, left:0, right:0, zIndex:300,
-      height:96,
+      height:128,
       background: scrolled ? "rgba(6,15,24,0.98)" : "rgba(6,15,24,0.92)",
       backdropFilter:"blur(12px)", WebkitBackdropFilter:"blur(12px)",
       borderBottom: scrolled ? "1px solid rgba(255,255,255,0.08)" : "1px solid transparent",
@@ -990,7 +990,7 @@ const NavBar = ({ onLogin, onLoginClick, font }) => {
       {/* ── LOGO + NAME ── */}
       <div style={{ display:"flex", alignItems:"center", gap:12, flexShrink:0, marginRight:"auto", cursor:"pointer" }}
         onClick={() => window.scrollTo({ top:0, behavior:"smooth" })}>
-        <LogoImg size={90}/>
+        <LogoImg size={120}/>
         <div>
           <div style={{ fontSize:22, fontWeight:800, color:"#fff", fontFamily:font, letterSpacing:"-0.5px", lineHeight:1.1 }}>
             CompliancePilot
@@ -1955,7 +1955,7 @@ const LandingPage = ({ onLogin }) => {
       <NavBar onLogin={openDemo} onLoginClick={openLogin} font={font}/>
 
       {/* ── HERO ─────────────────────────── */}
-      <section id="hero" style={{ paddingTop:96, position:"relative", overflow:"hidden", minHeight:"100vh", boxSizing:"border-box", display:"flex", flexDirection:"column", justifyContent:"flex-end" }}>
+      <section id="hero" style={{ paddingTop:128, position:"relative", overflow:"hidden", minHeight:"100vh", boxSizing:"border-box", display:"flex", flexDirection:"column", justifyContent:"flex-end" }}>
         {/* Background photo */}
         <div style={{ position:"absolute", inset:0, backgroundImage:`url(${CULTIVATION_IMG})`, backgroundSize:"cover", backgroundPosition:"center 20%", zIndex:0 }}/>
         {/* Dark gradient overlay */}
@@ -2146,7 +2146,7 @@ const LandingPage = ({ onLogin }) => {
       </section>
 
       {/* ── FAQ ── */}
-      <section id="faq" data-reveal="faq" style={{ padding:"120px 80px", position:"relative", overflow:"hidden", ...rs("faq") }}>
+      <section id="faq" data-reveal="faq" style={{ padding:"150px 80px 120px", position:"relative", overflow:"hidden", ...rs("faq") }}>
         {/* Dispensary background */}
         <div style={{ position:"absolute", inset:0, backgroundImage:`url(${DISPENSARY_IMG})`, backgroundSize:"cover", backgroundPosition:"center", zIndex:0 }}/>
         <div style={{ position:"absolute", inset:0, background:"rgba(4,12,24,0.88)", zIndex:1 }}/>
@@ -2190,7 +2190,7 @@ const LandingPage = ({ onLogin }) => {
       </section>
 
       {/* ── ABOUT US ── */}
-      <section id="about" data-reveal="about" style={{ padding:"120px 80px", background:"#060f18", position:"relative", overflow:"hidden", ...rs("about") }}>
+      <section id="about" data-reveal="about" style={{ padding:"150px 80px 120px", background:"#060f18", position:"relative", overflow:"hidden", ...rs("about") }}>
         <div style={{ position:"absolute", top:"10%", left:"50%", transform:"translateX(-50%)", width:700, height:400, borderRadius:"50%", background:"radial-gradient(ellipse, rgba(22,163,74,0.10) 0%, transparent 70%)", pointerEvents:"none" }}/>
         <div style={{ maxWidth:820, margin:"0 auto", textAlign:"center", position:"relative", zIndex:1 }}>
           <div style={{ fontSize:11, color:"rgba(34,197,94,0.7)", fontWeight:700, letterSpacing:"2.5px", textTransform:"uppercase", marginBottom:20, fontFamily:"'Space Mono',monospace" }}>About Us</div>
